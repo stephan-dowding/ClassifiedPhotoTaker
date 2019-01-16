@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		D4B94C8421EF5B4200130E95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B94C8221EF5B4200130E95 /* Main.storyboard */; };
 		D4B94C9021EF5B4200130E95 /* ClassifiedPhotoTakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94C8F21EF5B4200130E95 /* ClassifiedPhotoTakerTests.swift */; };
 		D4B94C9B21EF5B4200130E95 /* ClassifiedPhotoTakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94C9A21EF5B4200130E95 /* ClassifiedPhotoTakerUITests.swift */; };
+		D4B94CAA21EF5E8D00130E95 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94CA921EF5E8D00130E95 /* Folder.swift */; };
+		D4B94CAD21EF609E00130E95 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94CAC21EF609E00130E95 /* SidebarViewController.swift */; };
+		D4B94CAF21EF786800130E95 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94CAE21EF786800130E95 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		D4B94C9621EF5B4200130E95 /* ClassifiedPhotoTakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassifiedPhotoTakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B94C9A21EF5B4200130E95 /* ClassifiedPhotoTakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedPhotoTakerUITests.swift; sourceTree = "<group>"; };
 		D4B94C9C21EF5B4200130E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B94CA921EF5E8D00130E95 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		D4B94CAC21EF609E00130E95 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		D4B94CAE21EF786800130E95 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,8 @@
 		D4B94C7B21EF5B4000130E95 /* ClassifiedPhotoTaker */ = {
 			isa = PBXGroup;
 			children = (
+				D4B94CAB21EF5F8000130E95 /* Controllers */,
+				D4B94CA821EF5E5C00130E95 /* Models */,
 				D4B94C7C21EF5B4000130E95 /* AppDelegate.swift */,
 				D4B94C7E21EF5B4000130E95 /* ViewController.swift */,
 				D4B94C8021EF5B4200130E95 /* Assets.xcassets */,
@@ -122,6 +130,23 @@
 				D4B94C9C21EF5B4200130E95 /* Info.plist */,
 			);
 			path = ClassifiedPhotoTakerUITests;
+			sourceTree = "<group>";
+		};
+		D4B94CA821EF5E5C00130E95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4B94CA921EF5E8D00130E95 /* Folder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4B94CAB21EF5F8000130E95 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4B94CAC21EF609E00130E95 /* SidebarViewController.swift */,
+				D4B94CAE21EF786800130E95 /* CameraViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +217,11 @@
 				TargetAttributes = {
 					D4B94C7821EF5B4000130E95 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					D4B94C8A21EF5B4200130E95 = {
 						CreatedOnToolsVersion = 10.1;
@@ -204,7 +234,7 @@
 				};
 			};
 			buildConfigurationList = D4B94C7421EF5B4000130E95 /* Build configuration list for PBXProject "ClassifiedPhotoTaker" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -255,7 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B94C7F21EF5B4000130E95 /* ViewController.swift in Sources */,
+				D4B94CAF21EF786800130E95 /* CameraViewController.swift in Sources */,
 				D4B94C7D21EF5B4000130E95 /* AppDelegate.swift in Sources */,
+				D4B94CAA21EF5E8D00130E95 /* Folder.swift in Sources */,
+				D4B94CAD21EF609E00130E95 /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
