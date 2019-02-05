@@ -832,6 +832,19 @@
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tes-8d-DcF">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-rO-dTa">
+                                        <rect key="frame" x="358" y="13" width="76" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Photo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o5l-mt-5bW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="takePhotoWithButton:" target="GHE-e0-q0X" id="nvd-Qp-PCb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </customView>
                         </subviews>
                         <constraints>

@@ -15,6 +15,7 @@ class CameraViewController: NSViewController {
     
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
+    let stillImageOutput = AVCaptureStillImageOutput()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,10 @@ class CameraViewController: NSViewController {
         
         displayCameraPreview(captureDevice: findCamera())
         
-
+        stillImageOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecType.jpeg]
+        if captureSession.canAddOutput(stillImageOutput) {
+            captureSession.addOutput(stillImageOutput)
+        }
     }
     
     func findCamera() -> AVCaptureDevice? {
@@ -66,6 +70,25 @@ class CameraViewController: NSViewController {
                 print(AVCaptureSessionErrorKey.description)
             }
         }
+    }
+    
+    @IBAction func takePhoto(button: NSButton)
+    {
+        if let videoConnection = stillImageOutput.connection(with: AVMediaType.video) {
+            stillImageOutput.captureStillImageAsynchronously(from: videoConnection) {
+                (imageDataSampleBuffer, error) -> Void in
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer!)
+                let picturesDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                let imageUrl = picturesDirectory.appendingPathComponent("image.jpg", isDirectory: false)
+                print(imageUrl)
+                do{
+                    try imageData?.write(to: imageUrl)
+                } catch {
+                    print(":( no photo")
+                }
+            }
+        }
+        print("photo taken")
     }
     
 }
