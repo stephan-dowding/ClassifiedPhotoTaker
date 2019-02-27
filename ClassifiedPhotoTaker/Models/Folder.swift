@@ -10,8 +10,10 @@ import Foundation
 
 class Folder: NSObject {
     @objc let name: String
+    let url: URL
     
-    init(name: String){
+    init(name: String, url: URL){
         self.name = name
+        self.url = url
     }
 }

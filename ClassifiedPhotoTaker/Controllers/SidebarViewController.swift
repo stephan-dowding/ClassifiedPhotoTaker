@@ -10,7 +10,7 @@ import Cocoa
 
 class SidebarViewController: NSViewController {
     
-    let folders: [Folder] = [Folder(name: "Rock"), Folder(name: "Paper"), Folder(name: "Scissors")]
+    var folders: [Folder] = []
     
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var foldersArrayController: NSArrayController!
@@ -28,7 +28,11 @@ class SidebarViewController: NSViewController {
             NSApplication.shared.terminate(self)
         }
 
-        print(panel.urls[0])
+        let fm = FileManager.default
+        let contents = try! fm.contentsOfDirectory(at: panel.urls[0], includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles])
+            .filter{$0.hasDirectoryPath}
+
+        folders.append(contentsOf: contents.map{Folder(name: fm.displayName(atPath: $0.path), url: $0)})
 
         for folder in folders {
             foldersArrayController.addObject(folder)
