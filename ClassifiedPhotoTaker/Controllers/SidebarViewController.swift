@@ -17,6 +17,19 @@ class SidebarViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let panel = NSOpenPanel()
+        panel.canChooseFiles = false
+        panel.canChooseDirectories = true
+        panel.allowsMultipleSelection = false
+
+        let result = panel.runModal()
+        if result != NSApplication.ModalResponse.OK {
+            NSApplication.shared.terminate(self)
+        }
+
+        print(panel.urls[0])
+
         for folder in folders {
             foldersArrayController.addObject(folder)
         }
