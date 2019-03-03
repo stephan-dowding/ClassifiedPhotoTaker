@@ -37,6 +37,8 @@ class SidebarViewController: NSViewController {
         for folder in folders {
             foldersArrayController.addObject(folder)
         }
+        
+        Selected.folder = folders[0]
     }
     
 }

@@ -16,6 +16,7 @@
 		D4B94CAA21EF5E8D00130E95 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94CA921EF5E8D00130E95 /* Folder.swift */; };
 		D4B94CAD21EF609E00130E95 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94CAC21EF609E00130E95 /* SidebarViewController.swift */; };
 		D4B94CAF21EF786800130E95 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B94CAE21EF786800130E95 /* CameraViewController.swift */; };
+		D4D328CC222C24CA0078BDB6 /* Selected.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D328CB222C24CA0078BDB6 /* Selected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		D4B94CA921EF5E8D00130E95 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		D4B94CAC21EF609E00130E95 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		D4B94CAE21EF786800130E95 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		D4D328CB222C24CA0078BDB6 /* Selected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B94CA921EF5E8D00130E95 /* Folder.swift */,
+				D4D328CB222C24CA0078BDB6 /* Selected.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				D4B94CAF21EF786800130E95 /* CameraViewController.swift in Sources */,
 				D4B94C7D21EF5B4000130E95 /* AppDelegate.swift in Sources */,
 				D4B94CAA21EF5E8D00130E95 /* Folder.swift in Sources */,
+				D4D328CC222C24CA0078BDB6 /* Selected.swift in Sources */,
 				D4B94CAD21EF609E00130E95 /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
