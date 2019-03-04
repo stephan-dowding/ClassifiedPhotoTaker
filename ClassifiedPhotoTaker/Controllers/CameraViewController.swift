@@ -78,7 +78,7 @@ class CameraViewController: NSViewController {
             stillImageOutput.captureStillImageAsynchronously(from: videoConnection) {
                 (imageDataSampleBuffer, error) -> Void in
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer!)
-                let imageUrl = Selected.folder!.url.appendingPathComponent("image.jpg", isDirectory: false)
+                let imageUrl = Selected.folder!.url.appendingPathComponent("\(UUID().uuidString).jpg", isDirectory: false)
                 print(imageUrl)
                 do{
                     try imageData?.write(to: imageUrl)
