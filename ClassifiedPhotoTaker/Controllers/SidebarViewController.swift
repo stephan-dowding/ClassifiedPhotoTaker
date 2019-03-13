@@ -39,6 +39,14 @@ class SidebarViewController: NSViewController {
         }
         
         Selected.folder = folders[0]
+
+        tableView.delegate = self
     }
-    
+}
+
+extension SidebarViewController: NSTableViewDelegate {
+    public func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        Selected.folder = folders[row]
+        return true
+    }
 }
